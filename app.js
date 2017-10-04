@@ -2,21 +2,20 @@
 
 var userPoints = 0;
 
-var user = prompt('You\'re here because you want to know if you\'re a good friend. What is your name?');
+var user = prompt('Would you like to know if you\'re a good friend? Please introduce yourself.');
 
   alert('Hi '+user+'.');
 
   alert(user+'most would agree mark of a good friend (or journalist) is the ability to listen. Before we move on, let us tell you about a person named,\"Caitlin Sweeney\".' );
 
-  alert('Caitlin is best known for her eccentric behavior. Her journey has taken her all over the United States. Caitlin is jealous of people who grew up in one community their whole childhood.');
+  alert('Caitlin is best known for her eccentric behavior. Her journey has taken her all over the United States because of this Caitlin is jealous of people who grew up in one community their whole childhood.');
 
   alert('Caitlin is grateful for her posse of animals. She gets to come home to two dogs, two cats, and two aquariums at the end of the day.');
 
   alert(' She hopes to remain in the Pacific North West fo a considerable time and looks forward to becoming more involved in the community.');
 
 
-
- var answer = prompt('Do you remember who we just learned about? Was it Caitlin Smith? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
+ var answer = prompt('Maybe that was a little fast but do you remember who we just learned about? Was it Caitlin Smith? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
 
  console.log('Verifying knowledge of story subject name(no=True): '+answer);
 
@@ -78,7 +77,7 @@ var user = prompt('You\'re here because you want to know if you\'re a good frien
         console.log(user+ ' earned 0 points for the fifth question.'+ userPoints);
       }
 
-      alert('If you lost count, you\'ve answered '+ userPoints+' correctly and have earned '+ userPoints+ '.')
+      alert('If you lost count, you\'ve answered '+ userPoints+' correctly and have earned '+ userPoints+ ' points.')
 
       if (userPoints=== 5){
         alert('I wish you were my friend! You\'ve answered every question with precision!');
