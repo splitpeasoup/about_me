@@ -12,18 +12,18 @@ var user = prompt('You\'re here because you want to know if you\'re a good frien
 
   alert('Caitlin is grateful for her posse of animals. She gets to come home to two dogs, two cats, and two aquariums at the end of the day.');
 
-  alert(' She hopes to remain in the Pacific Northwest fo a considerable time and looks forward to becoming more involved in the community.');
-
+  alert(' She hopes to remain in the Pacific Northwest fo a considerable time and looks forward to becoming more involved in her community.');
 
 
  var answer = prompt('Do you remember who we just learned about? Was it Caitlin Smith? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
 
- console.log('Does user know subject\'s name(no = true): '+answer);
+ while(answer===!yes|y && !no|n){
 
+   var answer = prompt ('Only yes or no answers can be evaluated. Do you remember who we just learned about? Was it Caitlin Smith?');
 
- var answer4 = prompt('Caitlin pities the people that never left their home town? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
+   console.log('answer from while loop: '+ answer);
 
- console.log('User knows Caitlin envies hometown folks. (no = true): '+answer4);
+ }
 
  if (answer===no|n){
    alert('We\'re off to a good start!');
@@ -40,7 +40,17 @@ var user = prompt('You\'re here because you want to know if you\'re a good frien
 
   }
 
+  console.log('Does user know subject\'s name(no = true): '+answer);
+
 var answer1 = prompt('Does Caitlin plan on making the Pacific Northwest her home? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
+
+while(answer1===!yes|y && !no|n){
+
+  var answer1 = prompt ('Only yes or no answers can be evaluated. Does Caitlin plan on making the Pacific Northwest her home?');
+
+  console.log('answer1 from while loop: '+answer1);
+
+}
 
 console.log('Does user know Caitlin will make the Pacific Northwest her home? (yes = true): '+answer1);
 
@@ -59,48 +69,84 @@ console.log('Does user know Caitlin will make the Pacific Northwest her home? (y
 
 var answer2 = prompt('Caitlin has more than two types of animal companions. Type yes for true or no for false.').toLowerCase();// first question, modifier added for more efficient Boolean statements
 
-console.log('User knows Caitlin has more than two types of animals. (yes = true): '+answer2);
+
+while(answer2===!yes|y && !no|n){
+
+  var answer2 = prompt ('Only yes or no answers can be evaluated. Caitlin has more than two types of animal companions. Type yes for true or no for false.');
+
+  console.log('answer2 from while loop: '+answer2);
+
+  }
 
 
-   if (answer2===no|n){
-     alert('We\'re off to a good start!');
+  if (answer2===yes|y){
+     alert('Are you an elephant? Your memory is impressive.');
 
      userPoints = userPoints++;
-     console.log(user + ' earned 1 point for the first question. '+userPoints+':total.');
+     console.log(user + ' earned 1 point for the third question. '+userPoints+':total.');
 
    }
-    if (answer2===yes|y){
+  if (answer2===no|n){
       alert('Names can be hard I know, but we actually learned about Caitlin Sweeney.')
 
       console.log(user+ ' earned 0 points for the third question.'+ userPoints);
+    }
 
-var answer3 = prompt('Could Caitlin be described as eccentric? Type a yes or no response.').toLowerCase();// first question, modifier added for more efficient Boolean statements
+    console.log('User knows Caitlin has more than two types of animals. (yes = true): '+answer2);
 
-console.log('User knows Caitlin is eccentric. (yes = true): '+answer3);
+    var answer3 = prompt('Could Caitlin be described as eccentric? Type a yes or no response.').toLowerCase();// first question, modifier added for more efficient Boolean statements
 
-    }if (answer3===no|n){
-      alert('We\'re off to a good start!');
+    }
+
+    while(answer3===!yes|y && !no|n){
+
+      var answer3 = prompt ('Only yes or no answers can be evaluated. Could Caitlin be described as eccentric?');
+
+      console.log('answer3 from while loop: '+answer3);
+
+    }
+
+    if (answer3===yes|y){
+      alert('That\'s correct. Only one more question left!');
 
       userPoints = userPoints++;
       console.log(user + ' earned 1 point for the first question. '+userPoints+':total.');
 
     }
-     if (answer3===yes|y){
-       alert('Names can be hard I know, but we actually learned about Caitlin Sweeney.')
+    if (answer3===no|n){
+       alert('If you\'re saying no to be kind, don\'t worry eccentric is a good thing!')
 
        console.log(user+ ' earned 0 points for the fourth question.'+ userPoints);
-     }if (answer4===no|n){
-       alert('We\'re off to a good start!');
+     }
+
+     console.log('User knows Caitlin is eccentric. (yes = true): '+answer3);
+
+
+     var answer4 = prompt('Caitlin pities the people that never left their home town? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
+
+     while(answer4===!yes|y && !no|n){
+
+       var answer4 = prompt ('Only yes or no answers can be evaluated. Caitlin pities the people that never left their home town?');
+
+       console.log('answer4 from while loop: '+answer4);
+
+     }
+
+
+     if (answer4===no|n){
+       alert('Yes! Infact Caitlin envies those who have strong roots.');
 
        userPoints = userPoints++;
        console.log(user + ' earned 1 point for the first question. '+userPoints+':total.');
 
      }
       if (answer4===yes|y){
-        alert('Names can be hard I know, but we actually learned about Caitlin Sweeney.')
+        alert('Caitlin actually envies those with stong roots, she would never pity them!')
 
         console.log(user+ ' earned 0 points for the fifth question.'+ userPoints);
       }
+
+      console.log('User knows Caitlin envies hometown folks. (no = true): '+answer4);
 
       alert('If you lost count, you\'ve answered '+ userPoints+' correctly and have earned '+ userPoints+ '.')
 
