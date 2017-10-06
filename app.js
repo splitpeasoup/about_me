@@ -26,9 +26,9 @@ var answer = prompt('Do you remember who we just learned about? Was it Caitlin S
         console.log('answer from while loop: '+ answer);
 
     }
-if (answer=== ('no'||'n'||'yes'||'y')){
+if (answer === ('no'||'n')||('yes'||'y')){
 
-  if (answer==='no'||'n'){
+  if (answer ==='no'||'n'){
 
    alert('We\'re off to a good start!');
 
@@ -57,9 +57,9 @@ var answer1 = prompt('Does Caitlin plan on making the Pacific Northwest her home
 
     }
 
-if(answer1 === ('no'||'n'||'yes'||'y')){
+if(answer1 === (('no'||'n')||('yes'||'y')){
 
-  if (answer1 ==='yes'||'y'){
+  if (answer1 === 'yes'||'y'){
 
     alert('Correct, I\'m impressed. I\'m starting to think you could be a great listener!');
 
@@ -68,11 +68,12 @@ if(answer1 === ('no'||'n'||'yes'||'y')){
     console.log(user + ' earned 1 point for the second question. '+userPoints+':total.');
 
   }
-   else
+   else{
 
      alert('Not everyone is good at memorizing written information. You still have more opportunities for correct answers.');
 
      console.log(user+ ' earned 0 points for the second question.'+ userPoints+':total.');
+   }
 
  }
 
@@ -90,7 +91,7 @@ var answer2 = prompt('Caitlin has more than two types of animal companions. Type
 
       }
 
-if(answer2 === ('no'||'n'||'yes'||'y')){
+if(answer2 === ('no'||'n')||('yes'||'y')){
 
   if (answer2 ==='yes'||'y'){
 
@@ -123,7 +124,7 @@ var answer3 = prompt ('Could Caitlin be described as eccentric? Please answer ye
 
     }
 
-if(answer3 === ('no'||'n'||'yes'||'y')){
+if(answer3 === ('no'||'n')||('yes'||'y')){
 
     if (answer3 === 'yes'||'y'){
 
@@ -154,7 +155,8 @@ var answer4 = prompt('Caitlin pities the people that never left their home town?
 
      }
 
-if(answer4 === ('no'||'n'||'yes'||'y')){
+if (answer4 === ('no'||'n')||('yes'||'y')){
+
      if (answer4 === 'no'||'n'){
 
        alert('Yes! Infact Caitlin envies those who have strong roots.');
@@ -171,7 +173,7 @@ if(answer4 === ('no'||'n'||'yes'||'y')){
 
     }
 
-      alert('If you lost count, you\'ve answered '+ userPoints+' correctly and have earned '+ userPoints+ ' points.')
+      alert('If you lost count, you\'ve answered '+ userPoints+' correctly and have earned '+ userPoints + ' points.')
 
       if (userPoints === 5){
         alert('I wish you were my friend! You\'ve answered every question with precision!');
