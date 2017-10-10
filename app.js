@@ -92,7 +92,7 @@ console.log('User is on question '+ questions[i] + '- answer is:' + answers[i]);
 
     }
 // need something to connect answers and questions
-    if (answers[1] === 'yes' || answers[3] === 'yes' || answers[4] === 'yes' || answers[5] === 'no' || answers[0] === 'no'){
+    if (answers[1] === 'yes' || answers[2] === 'yes' || answers[3] === 'yes' || answers[4] === 'no' || answers[0] === 'no'){
 
     console.log(return true);
 
