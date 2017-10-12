@@ -1,4 +1,3 @@
-
 'use strict';//always at top of javascript
 //
 var userPoints = 0;
@@ -21,17 +20,16 @@ var user = prompt('You\'re here because you want to know if you\'re a good frien
   var  q2 = 'Caitlin has more than two types of animal companions. Type yes for true or no for false.'
   var  q3 = 'Could Caitlin be described as eccentric? Please answer yes or no.'
   var  q4 = 'Caitlin pities the people that never left their home town? Type yes or no.'
-  var questions = [q,q1,q2,q3,q4];
+  var questions = [ q, q1, q2, q3, q4];
 
-  var answers = [];
-  answers.length = 5;
+  var answers = ['no','yes','yes','yes','no'];
 
   var  ra = 'We\'re off to a good start!';
   var  ra1 = 'Correct, I\'m impressed. I\'m starting to think you could be a great listener!';
   var  ra2 = 'Are you an elephant? Your memory is impressive.';
   var  ra3 = 'That\'s correct. Only one more question left!';
   var  ra4 = 'Yes! Infact Caitlin envies those who have strong roots.';
-  var rightAnsweralert = [ra,ra1,ra2,ra3,ra4];
+  var rightAnsweralert = [ra , ra1, ra2, ra3, ra4];
 
 
   var  wa = 'Names can be hard I know, but we actually learned about Caitlin Sweeney.';
@@ -39,13 +37,15 @@ var user = prompt('You\'re here because you want to know if you\'re a good frien
   var  wa2 = 'That was a hard one. Unfortunately the correct answer was yes.'
   var  wa3 = 'If you\'re saying no to be kind, don\'t worry eccentric is a good thing!'
   var  wa4 = 'Caitlin actually envies those with stong roots, she would never pity them!'
-  var wrongAnsweralert = [wa,wa1,wa2,wa3,wa4];
+  var wrongAnsweralert = [ wa, wa1, wa2, wa3, wa4];
 
-  for(var i=0; i<questions.length; i++){
+  var i=0;
 
-    var answer = askQuestion();
+  for( ; i<questions.length; i++){
 
-    console.log(askQuestion());
+    var answer = askQuestion(questions,answers);
+
+    console.log(answer);
 
     if ( answer === true) {
 
@@ -56,12 +56,14 @@ var user = prompt('You\'re here because you want to know if you\'re a good frien
       console.log('Alert for question \"' + questions[i]+ '\":' + rightAnsweralert[i] +'. ' + userPoints + ':total points.');
 
     }
-    if ( answer === false) {
+    //if ( answer === false) {
+    else {
 
     alert(wrongAnsweralert[i]);
 
     console.log('Alert for question \"' + questions[i] + '\":' + wrongAnsweralert[i]+'. ' + userPoints + ':total points.');
-   }
+  }
+  // }
 }
 
   alert('If you lost count, you\'ve answered '+ userPoints+' correctly and have earned '+ userPoints + ' points.')
@@ -77,188 +79,32 @@ var user = prompt('You\'re here because you want to know if you\'re a good frien
   }
 
 
-function askQuestion(){
+function askQuestion(array , array1){
 
-answers[i]= prompt('Please respond with a yes or no response. '+ questions[i]).toLowerCase();
+var questions = array;
+
+var answers = array1;
+
+var response = prompt('Please respond with a yes or no response. '+ questions[i]).toLowerCase();
 
 
-console.log('User is on question '+ questions[i] + '- answer is:' + answers[i]);
+console.log('User is on question '+ questions[i] + '- answer is:' + response);
 
-  while( answers[i] !== 'yes' && answers[i] !== 'y' && answers[i] !== 'no' && answers[i] !== 'n'){
+  while( response !== 'yes' && response !== 'y' && response !== 'no' && response !== 'n'){
 
-        var answers = prompt (questions[i] +' Only yes or no answers can be evaluated.').toLowerCase();
+        response = prompt (questions[i] +' Only yes or no answers can be evaluated.').toLowerCase();
 
-        console.log('answer from while loop: '+ answers[i]);
+        console.log('answer from while loop: '+ response);
 
     }
 // need something to connect answers and questions
-    if (answers[1] === 'yes' || answers[2] === 'yes' || answers[3] === 'yes' || answers[4] === 'no' || answers[0] === 'no'){
+    if (response === answers[i]){
 
-    console.log(return true);
+    return true;
 
     }
       else
 
-      console.log(return false);
+      return false;
 
 }
-//
-//
-// var answer = prompt('Do you remember who we just learned about? Was it Caitlin Smith? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
-//
-//  console.log('User knows name from story: '+ answer);
-//
-//     while( answer !== 'yes' && answer !== 'y' && answer !== 'no' && answer !== 'n'){
-//
-//         var answer = prompt ('Only yes or no answers can be evaluated. Do you remember who we just learned about? Was it Caitlin Smith?').toLowerCase();
-//
-//         console.log('answer from while loop: '+ answer);
-//
-//     }
-// if (answer === ('no'||'n')||('yes'||'y')){
-//
-//   if (answer ==='no'||'n'){
-//
-//    alert('We\'re off to a good start!');
-//
-//    userPoints = userPoints + 1;
-//
-//    console.log(user + ' earned 1 point for the first question. '+userPoints+':total.');
-//
-//  }
-//  else
-//
-//     alert('Names can be hard I know, but we actually learned about Caitlin Sweeney.')
-//
-//     console.log(user+ ' earned 0 points for the first question. Current user points: '+ userPoints);
-//
-// }
-//
-// var answer1 = prompt('Does Caitlin plan on making the Pacific Northwest her home? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
-//
-//   console.log('Does user know Caitlin will make the Pacific Northwest her home? : '+ answer1);
-//
-//     while( answer1 !== 'yes' && answer1 !== 'y' && answer1 !== 'no' && answer1 !== 'n'){
-//
-//         var answer1 = prompt ('Only yes or no answers can be evaluated. Does Caitlin plan on making the Pacific Northwest her home?').toLowerCase();
-//
-//         console.log('answer1 from while loop : '+ answer1);
-//
-//     }
-//
-// if(answer1 === (('no'||'n')||('yes'||'y')){
-//
-//   if (answer1 === 'yes'||'y'){
-//
-//     alert('Correct, I\'m impressed. I\'m starting to think you could be a great listener!');
-//
-//     userPoints = userPoints + 1;
-//
-//     console.log(user + ' earned 1 point for the second question. '+userPoints+':total.');
-//
-//   }
-//    else{
-//
-//      alert('Not everyone is good at memorizing written information. You still have more opportunities for correct answers.');
-//
-//      console.log(user+ ' earned 0 points for the second question.'+ userPoints+':total.');
-//    }
-//
-//  }
-//
-// var answer2 = prompt('Caitlin has more than two types of animal companions. Type yes for true or no for false.').toLowerCase();// first question, modifier added for more efficient Boolean statements
-//
-//
-//     console.log('User knows Caitlin has more than two types of animals. : '+ answer2);
-//
-//
-//       while( answer2 !== 'yes' && answer2 !== 'y' && answer2 !== 'no' && answer2 !== 'n'){
-//
-//           var answer2 = prompt ('Only yes or no answers can be evaluated. Caitlin has more than two types of animal companions. Type yes for true or no for false.').toLowerCase();
-//
-//           console.log('answer2 from while loop: '+ answer2);
-//
-//       }
-//
-// if(answer2 === ('no'||'n')||('yes'||'y')){
-//
-//   if (answer2 ==='yes'||'y'){
-//
-//      alert('Are you an elephant? Your memory is impressive.');
-//
-//      userPoints = userPoints + 1;
-//
-//      console.log(user + ' earned 1 point for the third question. '+userPoints+':total.');
-//
-//    }
-//    else
-//
-//       alert('That was a hard one. Unfortunately the correct answer was yes.');
-//
-//       console.log(user+ ' earned 0 points for the third question.'+ userPoints);
-//
-// }
-//
-// var answer3 = prompt ('Could Caitlin be described as eccentric? Please answer yes or no.');
-//
-//
-//   console.log('User knows Caitlin is eccentric : '+answer3);
-//
-//
-//     while( answer3 !== 'yes' && answer3 !== 'y' && answer3 !== 'no' && answer3 !== 'n'){
-//
-//       var answer3 = prompt ('Only yes or no answers can be evaluated. Could Caitlin be described as eccentric?').toLowerCase();
-//
-//       console.log('answer3 from while loop: '+ answer3);
-//
-//     }
-//
-// if(answer3 === ('no'||'n')||('yes'||'y')){
-//
-//     if (answer3 === 'yes'||'y'){
-//
-//       alert('That\'s correct. Only one more question left!');
-//
-//       userPoints = userPoints + 1;
-//
-//       console.log(user + ' earned 1 point for the first question. '+userPoints+':total.');
-//
-//     }
-//       else
-//
-//        alert('If you\'re saying no to be kind, don\'t worry eccentric is a good thing!')
-//
-//        console.log(user+ ' earned 0 points for the fourth question.'+ userPoints +' : total.');;
-//
-//    }
-//
-// var answer4 = prompt('Caitlin pities the people that never left their home town? Type yes or no.').toLowerCase();// first question, modifier added for more efficient Boolean statements
-//
-//     console.log('User knows Caitlin envies hometown folks : '+ answer4);
-//
-//         while( answer4 !== 'yes' && answer4 !== 'y' && answer4 !== 'no' && answer4 !== 'n'){
-//
-//           var answer4 = prompt ('Only yes or no answers can be evaluated. Caitlin pities the people that never left their home town?');
-//
-//           console.log('answer4 from while loop: '+ answer4);
-//
-//      }
-//
-// if (answer4 === ('no'||'n')||('yes'||'y')){
-//
-//      if (answer4 === 'no'||'n'){
-//
-//        alert('Yes! Infact Caitlin envies those who have strong roots.');
-//
-//        userPoints = userPoints + 1;
-//
-//        console.log(user + ' earned 1 point for the first question. '+ userPoints +':total.');
-//
-//      }
-//       else
-//         alert('Caitlin actually envies those with stong roots, she would never pity them!')
-//
-//         console.log(user + ' earned 0 points for the fifth question.'+ userPoints +' : total.');
-//
-//     }
-//
